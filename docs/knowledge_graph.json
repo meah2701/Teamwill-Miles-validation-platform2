@@ -1,0 +1,431 @@
+{
+  "nodes": [
+    {
+      "id": "OBJ_Contrat",
+      "type": "objet_metier",
+      "layer": 0,
+      "label": "Contrat"
+    },
+    {
+      "id": "OBJ_Client",
+      "type": "objet_metier",
+      "layer": 0,
+      "label": "Client"
+    },
+    {
+      "id": "OBJ_Véhicule",
+      "type": "objet_metier",
+      "layer": 0,
+      "label": "Véhicule"
+    },
+    {
+      "id": "CONTRACT",
+      "type": "table",
+      "layer": 1,
+      "label": "CONTRACT"
+    },
+    {
+      "id": "CUSTOMER",
+      "type": "table",
+      "layer": 1,
+      "label": "CUSTOMER"
+    },
+    {
+      "id": "FLEETVEHICLE",
+      "type": "table",
+      "layer": 1,
+      "label": "FLEETVEHICLE"
+    },
+    {
+      "id": "CONTRACT.CONTRACT_ID",
+      "type": "colonne",
+      "layer": 2,
+      "label": "CONTRACT_ID"
+    },
+    {
+      "id": "CONTRACT.REFERENCE",
+      "type": "colonne",
+      "layer": 2,
+      "label": "REFERENCE"
+    },
+    {
+      "id": "CONTRACT.START_DATE",
+      "type": "colonne",
+      "layer": 2,
+      "label": "START_DATE"
+    },
+    {
+      "id": "CONTRACT.END_DATE",
+      "type": "colonne",
+      "layer": 2,
+      "label": "END_DATE"
+    },
+    {
+      "id": "CONTRACT.AMOUNT",
+      "type": "colonne",
+      "layer": 2,
+      "label": "AMOUNT"
+    },
+    {
+      "id": "CUSTOMER.CUSTOMER_ID",
+      "type": "colonne",
+      "layer": 2,
+      "label": "CUSTOMER_ID"
+    },
+    {
+      "id": "CUSTOMER.FIRST_NAME",
+      "type": "colonne",
+      "layer": 2,
+      "label": "FIRST_NAME"
+    },
+    {
+      "id": "CUSTOMER.LAST_NAME",
+      "type": "colonne",
+      "layer": 2,
+      "label": "LAST_NAME"
+    },
+    {
+      "id": "CUSTOMER.EMAIL",
+      "type": "colonne",
+      "layer": 2,
+      "label": "EMAIL"
+    },
+    {
+      "id": "CUSTOMER.PHONE",
+      "type": "colonne",
+      "layer": 2,
+      "label": "PHONE"
+    },
+    {
+      "id": "FLEETVEHICLE.FLEETVEHICLE_ID",
+      "type": "colonne",
+      "layer": 2,
+      "label": "FLEETVEHICLE_ID"
+    },
+    {
+      "id": "FLEETVEHICLE.LICENSE_PLATE",
+      "type": "colonne",
+      "layer": 2,
+      "label": "LICENSE_PLATE"
+    },
+    {
+      "id": "FLEETVEHICLE.VIN",
+      "type": "colonne",
+      "layer": 2,
+      "label": "VIN"
+    },
+    {
+      "id": "FLEETVEHICLE.MAKE",
+      "type": "colonne",
+      "layer": 2,
+      "label": "MAKE"
+    },
+    {
+      "id": "FLEETVEHICLE.MODEL",
+      "type": "colonne",
+      "layer": 2,
+      "label": "MODEL"
+    },
+    {
+      "id": "FLEETVEHICLE.YEAR",
+      "type": "colonne",
+      "layer": 2,
+      "label": "YEAR"
+    },
+    {
+      "id": "CONTRACT.REFERENCE.NOT_NULL",
+      "type": "contrainte",
+      "layer": 3,
+      "label": "NOT_NULL"
+    },
+    {
+      "id": "CONTRACT.START_DATE.NOT_NULL",
+      "type": "contrainte",
+      "layer": 3,
+      "label": "NOT_NULL"
+    },
+    {
+      "id": "CUSTOMER.FIRST_NAME.NOT_NULL",
+      "type": "contrainte",
+      "layer": 3,
+      "label": "NOT_NULL"
+    },
+    {
+      "id": "CUSTOMER.LAST_NAME.NOT_NULL",
+      "type": "contrainte",
+      "layer": 3,
+      "label": "NOT_NULL"
+    },
+    {
+      "id": "CUSTOMER.EMAIL.FORMAT",
+      "type": "contrainte",
+      "layer": 3,
+      "label": "FORMAT"
+    },
+    {
+      "id": "FLEETVEHICLE.LICENSE_PLATE.NOT_NULL",
+      "type": "contrainte",
+      "layer": 3,
+      "label": "NOT_NULL"
+    },
+    {
+      "id": "FLEETVEHICLE.VIN.UNIQUE",
+      "type": "contrainte",
+      "layer": 3,
+      "label": "UNIQUE"
+    },
+    {
+      "id": "CONTRACT.AMOUNT.POSITIVE",
+      "type": "contrainte",
+      "layer": 3,
+      "label": "POSITIVE"
+    },
+    {
+      "id": "CUSTOMER.PHONE.FORMAT",
+      "type": "contrainte",
+      "layer": 3,
+      "label": "FORMAT"
+    },
+    {
+      "id": "CONTRACT.END_DATE.DATE_RANGE",
+      "type": "contrainte",
+      "layer": 3,
+      "label": "DATE_RAN"
+    },
+    {
+      "id": "R001",
+      "type": "regle",
+      "layer": 4,
+      "label": "R001"
+    },
+    {
+      "id": "R002",
+      "type": "regle",
+      "layer": 4,
+      "label": "R002"
+    },
+    {
+      "id": "R003",
+      "type": "regle",
+      "layer": 4,
+      "label": "R003"
+    },
+    {
+      "id": "R004",
+      "type": "regle",
+      "layer": 4,
+      "label": "R004"
+    },
+    {
+      "id": "R005",
+      "type": "regle",
+      "layer": 4,
+      "label": "R005"
+    },
+    {
+      "id": "R006",
+      "type": "regle",
+      "layer": 4,
+      "label": "R006"
+    },
+    {
+      "id": "R007",
+      "type": "regle",
+      "layer": 4,
+      "label": "R007"
+    },
+    {
+      "id": "R008",
+      "type": "regle",
+      "layer": 4,
+      "label": "R008"
+    }
+  ],
+  "edges": [
+    {
+      "source": "OBJ_Contrat",
+      "target": "CONTRACT",
+      "relation": "est_associee_a"
+    },
+    {
+      "source": "OBJ_Client",
+      "target": "CUSTOMER",
+      "relation": "est_associee_a"
+    },
+    {
+      "source": "OBJ_Véhicule",
+      "target": "FLEETVEHICLE",
+      "relation": "est_associee_a"
+    },
+    {
+      "source": "CONTRACT",
+      "target": "CONTRACT.CONTRACT_ID",
+      "relation": "contient"
+    },
+    {
+      "source": "CONTRACT",
+      "target": "CONTRACT.REFERENCE",
+      "relation": "contient"
+    },
+    {
+      "source": "CONTRACT",
+      "target": "CONTRACT.START_DATE",
+      "relation": "contient"
+    },
+    {
+      "source": "CONTRACT",
+      "target": "CONTRACT.END_DATE",
+      "relation": "contient"
+    },
+    {
+      "source": "CONTRACT",
+      "target": "CONTRACT.AMOUNT",
+      "relation": "contient"
+    },
+    {
+      "source": "CUSTOMER",
+      "target": "CUSTOMER.CUSTOMER_ID",
+      "relation": "contient"
+    },
+    {
+      "source": "CUSTOMER",
+      "target": "CUSTOMER.FIRST_NAME",
+      "relation": "contient"
+    },
+    {
+      "source": "CUSTOMER",
+      "target": "CUSTOMER.LAST_NAME",
+      "relation": "contient"
+    },
+    {
+      "source": "CUSTOMER",
+      "target": "CUSTOMER.EMAIL",
+      "relation": "contient"
+    },
+    {
+      "source": "CUSTOMER",
+      "target": "CUSTOMER.PHONE",
+      "relation": "contient"
+    },
+    {
+      "source": "FLEETVEHICLE",
+      "target": "FLEETVEHICLE.FLEETVEHICLE_ID",
+      "relation": "contient"
+    },
+    {
+      "source": "FLEETVEHICLE",
+      "target": "FLEETVEHICLE.LICENSE_PLATE",
+      "relation": "contient"
+    },
+    {
+      "source": "FLEETVEHICLE",
+      "target": "FLEETVEHICLE.VIN",
+      "relation": "contient"
+    },
+    {
+      "source": "FLEETVEHICLE",
+      "target": "FLEETVEHICLE.MAKE",
+      "relation": "contient"
+    },
+    {
+      "source": "FLEETVEHICLE",
+      "target": "FLEETVEHICLE.MODEL",
+      "relation": "contient"
+    },
+    {
+      "source": "FLEETVEHICLE",
+      "target": "FLEETVEHICLE.YEAR",
+      "relation": "contient"
+    },
+    {
+      "source": "CONTRACT.REFERENCE",
+      "target": "CONTRACT.REFERENCE.NOT_NULL",
+      "relation": "a_contrainte"
+    },
+    {
+      "source": "CONTRACT.START_DATE",
+      "target": "CONTRACT.START_DATE.NOT_NULL",
+      "relation": "a_contrainte"
+    },
+    {
+      "source": "CONTRACT.END_DATE",
+      "target": "CONTRACT.END_DATE.DATE_RANGE",
+      "relation": "a_contrainte"
+    },
+    {
+      "source": "CONTRACT.AMOUNT",
+      "target": "CONTRACT.AMOUNT.POSITIVE",
+      "relation": "a_contrainte"
+    },
+    {
+      "source": "CUSTOMER.FIRST_NAME",
+      "target": "CUSTOMER.FIRST_NAME.NOT_NULL",
+      "relation": "a_contrainte"
+    },
+    {
+      "source": "CUSTOMER.LAST_NAME",
+      "target": "CUSTOMER.LAST_NAME.NOT_NULL",
+      "relation": "a_contrainte"
+    },
+    {
+      "source": "CUSTOMER.EMAIL",
+      "target": "CUSTOMER.EMAIL.FORMAT",
+      "relation": "a_contrainte"
+    },
+    {
+      "source": "CUSTOMER.PHONE",
+      "target": "CUSTOMER.PHONE.FORMAT",
+      "relation": "a_contrainte"
+    },
+    {
+      "source": "FLEETVEHICLE.LICENSE_PLATE",
+      "target": "FLEETVEHICLE.LICENSE_PLATE.NOT_NULL",
+      "relation": "a_contrainte"
+    },
+    {
+      "source": "FLEETVEHICLE.VIN",
+      "target": "FLEETVEHICLE.VIN.UNIQUE",
+      "relation": "a_contrainte"
+    },
+    {
+      "source": "R001",
+      "target": "CONTRACT",
+      "relation": "valide"
+    },
+    {
+      "source": "R002",
+      "target": "CUSTOMER",
+      "relation": "valide"
+    },
+    {
+      "source": "R003",
+      "target": "CUSTOMER",
+      "relation": "valide"
+    },
+    {
+      "source": "R004",
+      "target": "FLEETVEHICLE",
+      "relation": "valide"
+    },
+    {
+      "source": "R005",
+      "target": "CONTRACT",
+      "relation": "valide"
+    },
+    {
+      "source": "R006",
+      "target": "CONTRACT",
+      "relation": "valide"
+    },
+    {
+      "source": "R007",
+      "target": "FLEETVEHICLE",
+      "relation": "valide"
+    },
+    {
+      "source": "R008",
+      "target": "CUSTOMER",
+      "relation": "valide"
+    }
+  ]
+}

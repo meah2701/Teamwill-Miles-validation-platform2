@@ -1,0 +1,45 @@
+# Environnement virtuel Python
+venv/
+env/
+ENV/
+
+# Cache Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Modèles entraînés (trop volumineux)
+models/*.pkl
+models/*.keras
+models/*.h5
+
+# Données volumineuses (optionnel - décommentez si nécessaire)
+# DataX/*.csv
+
+# Fichiers temporaires
+*.tmp
+*.bak
+
+# Secrets et credentials
+*.env
+.env.local
+secrets.json

@@ -1,0 +1,114 @@
+{
+  "date_execution": "2026-10-13T21:25:49.590701",
+  "version": "2.0",
+  "comparaisons": [
+    {
+      "table": "CONTRACT",
+      "cle": "contract_id",
+      "source_count": 50,
+      "cible_count": 50,
+      "cles_communes": 48,
+      "manquants_source": [
+        "52",
+        "51"
+      ],
+      "manquants_cible": [
+        "32",
+        "31"
+      ],
+      "ecarts": [
+        {
+          "cle_valeur": "11",
+          "colonne": "status",
+          "valeur_source": "RESILIE",
+          "valeur_cible": "ACTIF",
+          "critique": false,
+          "type_ecart": "difference_texte"
+        },
+        {
+          "cle_valeur": "26",
+          "colonne": "amount",
+          "valeur_source": "20554.61",
+          "valeur_cible": "30000.0",
+          "critique": true,
+          "type_ecart": "difference_numerique"
+        },
+        {
+          "cle_valeur": "6",
+          "colonne": "amount",
+          "valeur_source": "18829.32",
+          "valeur_cible": "21000.5",
+          "critique": true,
+          "type_ecart": "difference_numerique"
+        },
+        {
+          "cle_valeur": "16",
+          "colonne": "customer_name",
+          "valeur_source": "Client P",
+          "valeur_cible": "Client Modifié",
+          "critique": false,
+          "type_ecart": "difference_texte"
+        },
+        {
+          "cle_valeur": "21",
+          "colonne": "credit_score",
+          "valeur_source": "679.0",
+          "valeur_cible": "650.0",
+          "critique": false,
+          "type_ecart": "difference_numerique"
+        }
+      ],
+      "nb_ecarts": 5,
+      "nb_ecarts_critiques": 2,
+      "nb_ecarts_mineurs": 3,
+      "taux_correspondance": 92.3076923076923,
+      "taux_ecart": 2.083333333333333,
+      "statistiques_par_colonne": {
+        "credit_score": {
+          "nb_ecarts": 1,
+          "critique": false
+        },
+        "status": {
+          "nb_ecarts": 1,
+          "critique": false
+        },
+        "customer_name": {
+          "nb_ecarts": 1,
+          "critique": false
+        },
+        "amount": {
+          "nb_ecarts": 2,
+          "critique": true
+        },
+        "reference": {
+          "nb_ecarts": 0,
+          "critique": true
+        }
+      },
+      "recommandations": [
+        {
+          "priorite": "HAUTE",
+          "categorie": "Critique",
+          "message": "2 écarts critiques détectés. Investigation immédiate requise."
+        },
+        {
+          "priorite": "MOYENNE",
+          "categorie": "Colonne",
+          "message": "La colonne 'amount' concentre 2 écarts. Vérifier la logique de transformation."
+        },
+        {
+          "priorite": "MOYENNE",
+          "categorie": "Manquants",
+          "message": "2 enregistrements manquants dans la source. Vérifier l'extraction."
+        }
+      ]
+    }
+  ],
+  "total_ecarts": 5,
+  "ecarts_critiques": 2,
+  "ecarts_mineurs": 3,
+  "manquants_source": 2,
+  "manquants_cible": 2,
+  "score_reconciliation": 71.92307692307693,
+  "recommandations": []
+}

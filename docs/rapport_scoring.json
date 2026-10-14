@@ -1,0 +1,152 @@
+{
+  "date_execution": "2026-10-13T21:45:00.009693",
+  "version": "2.0",
+  "scores": {
+    "CONTRACT": {
+      "COMPLETUDE": 99.8,
+      "VALIDITE": 99.0,
+      "COHERENCE": 99.0,
+      "UNICITE": 100.0,
+      "INTEGRITE_REFERENTIELLE": 100
+    }
+  },
+  "score_global": 99.56,
+  "ponderation": {
+    "COMPLETUDE": 20,
+    "VALIDITE": 20,
+    "COHERENCE": 20,
+    "UNICITE": 20,
+    "INTEGRITE_REFERENTIELLE": 20
+  },
+  "details": {
+    "CONTRACT": {
+      "table": "CONTRACT",
+      "nb_lignes": 100,
+      "completude": {
+        "score": 99.8,
+        "details": {
+          "CONTRACT_ID": {
+            "nb_total": 100,
+            "nb_renseignes": 100,
+            "nb_manquants": 0,
+            "taux": 100.0
+          },
+          "REFERENCE": {
+            "nb_total": 100,
+            "nb_renseignes": 99,
+            "nb_manquants": 1,
+            "taux": 99.0
+          },
+          "START_DATE": {
+            "nb_total": 100,
+            "nb_renseignes": 100,
+            "nb_manquants": 0,
+            "taux": 100.0
+          },
+          "END_DATE": {
+            "nb_total": 100,
+            "nb_renseignes": 100,
+            "nb_manquants": 0,
+            "taux": 100.0
+          },
+          "AMOUNT": {
+            "nb_total": 100,
+            "nb_renseignes": 100,
+            "nb_manquants": 0,
+            "taux": 100.0
+          }
+        },
+        "table": "CONTRACT"
+      },
+      "validite": {
+        "score": 99.0,
+        "details": {
+          "AMOUNT_POSITIVE": {
+            "colonne": "AMOUNT",
+            "contrainte": "POSITIVE",
+            "nb_total": 100,
+            "nb_valides": 99,
+            "nb_invalides": 1,
+            "taux": 99.0
+          },
+          "REFERENCE_NOT_NULL": {
+            "colonne": "REFERENCE",
+            "contrainte": "NOT_NULL",
+            "nb_total": 100,
+            "nb_valides": 99,
+            "nb_invalides": 1,
+            "taux": 99.0
+          }
+        },
+        "table": "CONTRACT"
+      },
+      "coherence": {
+        "score": 99.0,
+        "details": {
+          "DATE_RANGE": {
+            "nb_total": 100,
+            "nb_valides": 99,
+            "nb_invalides": 1,
+            "taux": 99.0
+          }
+        },
+        "table": "CONTRACT"
+      },
+      "unicite": {
+        "score": 100.0,
+        "details": {
+          "CONTRACT_ID": {
+            "nb_total": 100,
+            "nb_uniques": 100,
+            "nb_doublons": 0,
+            "taux": 100.0
+          }
+        },
+        "table": "CONTRACT"
+      },
+      "integrite": {
+        "score": 100,
+        "details": {},
+        "table": "CONTRACT"
+      },
+      "score_global": {
+        "score": 99.56,
+        "details": {
+          "COMPLETUDE": {
+            "score": 99.8,
+            "poids": 20,
+            "contribution": 19.96
+          },
+          "VALIDITE": {
+            "score": 99.0,
+            "poids": 20,
+            "contribution": 19.8
+          },
+          "COHERENCE": {
+            "score": 99.0,
+            "poids": 20,
+            "contribution": 19.8
+          },
+          "UNICITE": {
+            "score": 100.0,
+            "poids": 20,
+            "contribution": 20.0
+          },
+          "INTEGRITE_REFERENTIELLE": {
+            "score": 100,
+            "poids": 20,
+            "contribution": 20.0
+          }
+        },
+        "ponderation": {
+          "COMPLETUDE": 20,
+          "VALIDITE": 20,
+          "COHERENCE": 20,
+          "UNICITE": 20,
+          "INTEGRITE_REFERENTIELLE": 20
+        }
+      }
+    }
+  },
+  "historique": []
+}

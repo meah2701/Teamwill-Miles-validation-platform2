@@ -1,0 +1,4 @@
+colonne,type,operateur,seuil,direction,description,mean_anom,mean_norm,std_anom,std_norm
+duration,numerique,>,-9.123551034703155,élevée,valeur trop élevée (moyenne anomalies: 77),77.03883635325457,36.550170607739034,86.16238738795772,12.585726459263869
+interest_rate,numerique,>,1.1286907530455004,élevée,valeur trop élevée (moyenne anomalies: 11),11.245706692157357,4.492323114625369,10.117015939111857,0.5132512796203975
+credit_score,numerique,<,407.8221865074274,basse,valeur trop basse (moyenne anomalies: 305),305.35258296065945,698.674423005144,102.46960354676791,50.23478210607999

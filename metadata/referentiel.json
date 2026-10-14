@@ -1,0 +1,439 @@
+{
+  "version": "2.1",
+  "date_maj": "2026-08-11T12:37:48.103281",
+  "Modele_donnees": [
+    {
+      "TABLE_NAME": "CONTRACT",
+      "COLUMN_NAME": "CONTRACT_ID",
+      "DATA_TYPE": "NUMBER"
+    },
+    {
+      "TABLE_NAME": "CONTRACT",
+      "COLUMN_NAME": "REFERENCE",
+      "DATA_TYPE": "VARCHAR2"
+    },
+    {
+      "TABLE_NAME": "CONTRACT",
+      "COLUMN_NAME": "START_DATE",
+      "DATA_TYPE": "DATE"
+    },
+    {
+      "TABLE_NAME": "CONTRACT",
+      "COLUMN_NAME": "END_DATE",
+      "DATA_TYPE": "DATE"
+    },
+    {
+      "TABLE_NAME": "CONTRACT",
+      "COLUMN_NAME": "AMOUNT",
+      "DATA_TYPE": "NUMBER"
+    },
+    {
+      "TABLE_NAME": "CUSTOMER",
+      "COLUMN_NAME": "CUSTOMER_ID",
+      "DATA_TYPE": "NUMBER"
+    },
+    {
+      "TABLE_NAME": "CUSTOMER",
+      "COLUMN_NAME": "FIRST_NAME",
+      "DATA_TYPE": "VARCHAR2"
+    },
+    {
+      "TABLE_NAME": "CUSTOMER",
+      "COLUMN_NAME": "LAST_NAME",
+      "DATA_TYPE": "VARCHAR2"
+    },
+    {
+      "TABLE_NAME": "CUSTOMER",
+      "COLUMN_NAME": "EMAIL",
+      "DATA_TYPE": "VARCHAR2"
+    },
+    {
+      "TABLE_NAME": "CUSTOMER",
+      "COLUMN_NAME": "PHONE",
+      "DATA_TYPE": "VARCHAR2"
+    },
+    {
+      "TABLE_NAME": "FLEETVEHICLE",
+      "COLUMN_NAME": "FLEETVEHICLE_ID",
+      "DATA_TYPE": "NUMBER"
+    },
+    {
+      "TABLE_NAME": "FLEETVEHICLE",
+      "COLUMN_NAME": "LICENSE_PLATE",
+      "DATA_TYPE": "VARCHAR2"
+    },
+    {
+      "TABLE_NAME": "FLEETVEHICLE",
+      "COLUMN_NAME": "VIN",
+      "DATA_TYPE": "VARCHAR2"
+    },
+    {
+      "TABLE_NAME": "FLEETVEHICLE",
+      "COLUMN_NAME": "MAKE",
+      "DATA_TYPE": "VARCHAR2"
+    },
+    {
+      "TABLE_NAME": "FLEETVEHICLE",
+      "COLUMN_NAME": "MODEL",
+      "DATA_TYPE": "VARCHAR2"
+    },
+    {
+      "TABLE_NAME": "FLEETVEHICLE",
+      "COLUMN_NAME": "YEAR",
+      "DATA_TYPE": "NUMBER"
+    }
+  ],
+  "Objets_metier": [
+    {
+      "OBJET_NOM": "Contrat",
+      "TABLE_ASSOCIEE": "CONTRACT",
+      "COLONNE_ASSOCIEE": "CONTRACT_ID"
+    },
+    {
+      "OBJET_NOM": "Client",
+      "TABLE_ASSOCIEE": "CUSTOMER",
+      "COLONNE_ASSOCIEE": "CUSTOMER_ID"
+    },
+    {
+      "OBJET_NOM": "Véhicule",
+      "TABLE_ASSOCIEE": "FLEETVEHICLE",
+      "COLONNE_ASSOCIEE": "FLEETVEHICLE_ID"
+    }
+  ],
+  "Mappings": [
+    {
+      "SYSTEME_SOURCE": "MILES",
+      "TABLE_SOURCE": "CONTRACT",
+      "CHAMP_SOURCE": "REFERENCE",
+      "SYSTEME_CIBLE": "SAP",
+      "TABLE_CIBLE": "CONTRAT",
+      "CHAMP_CIBLE": "NUMERO_CONTRAT"
+    },
+    {
+      "SYSTEME_SOURCE": "MILES",
+      "TABLE_SOURCE": "CONTRACT",
+      "CHAMP_SOURCE": "AMOUNT",
+      "SYSTEME_CIBLE": "SAP",
+      "TABLE_CIBLE": "CONTRAT",
+      "CHAMP_CIBLE": "MONTANT"
+    },
+    {
+      "SYSTEME_SOURCE": "MILES",
+      "TABLE_SOURCE": "CUSTOMER",
+      "CHAMP_SOURCE": "FIRST_NAME",
+      "SYSTEME_CIBLE": "SAP",
+      "TABLE_CIBLE": "CLIENT",
+      "CHAMP_CIBLE": "PRENOM"
+    },
+    {
+      "SYSTEME_SOURCE": "MILES",
+      "TABLE_SOURCE": "CUSTOMER",
+      "CHAMP_SOURCE": "LAST_NAME",
+      "SYSTEME_CIBLE": "SAP",
+      "TABLE_CIBLE": "CLIENT",
+      "CHAMP_CIBLE": "NOM"
+    },
+    {
+      "SYSTEME_SOURCE": "MILES",
+      "TABLE_SOURCE": "FLEETVEHICLE",
+      "CHAMP_SOURCE": "LICENSE_PLATE",
+      "SYSTEME_CIBLE": "SAP",
+      "TABLE_CIBLE": "VEHICULE",
+      "CHAMP_CIBLE": "PLAQUE"
+    }
+  ],
+  "Contraintes": [
+    {
+      "TABLE_NAME": "CONTRACT",
+      "COLUMN_NAME": "REFERENCE",
+      "TYPE_CONTRAINTE": "NOT_NULL",
+      "VALEUR": null
+    },
+    {
+      "TABLE_NAME": "CONTRACT",
+      "COLUMN_NAME": "START_DATE",
+      "TYPE_CONTRAINTE": "NOT_NULL",
+      "VALEUR": null
+    },
+    {
+      "TABLE_NAME": "CUSTOMER",
+      "COLUMN_NAME": "FIRST_NAME",
+      "TYPE_CONTRAINTE": "NOT_NULL",
+      "VALEUR": null
+    },
+    {
+      "TABLE_NAME": "CUSTOMER",
+      "COLUMN_NAME": "LAST_NAME",
+      "TYPE_CONTRAINTE": "NOT_NULL",
+      "VALEUR": null
+    },
+    {
+      "TABLE_NAME": "CUSTOMER",
+      "COLUMN_NAME": "EMAIL",
+      "TYPE_CONTRAINTE": "FORMAT",
+      "VALEUR": "email"
+    },
+    {
+      "TABLE_NAME": "FLEETVEHICLE",
+      "COLUMN_NAME": "LICENSE_PLATE",
+      "TYPE_CONTRAINTE": "NOT_NULL",
+      "VALEUR": null
+    },
+    {
+      "TABLE_NAME": "FLEETVEHICLE",
+      "COLUMN_NAME": "VIN",
+      "TYPE_CONTRAINTE": "UNIQUE",
+      "VALEUR": null
+    },
+    {
+      "TABLE_NAME": "CONTRACT",
+      "COLUMN_NAME": "AMOUNT",
+      "TYPE_CONTRAINTE": "POSITIVE",
+      "VALEUR": null
+    },
+    {
+      "TABLE_NAME": "CUSTOMER",
+      "COLUMN_NAME": "PHONE",
+      "TYPE_CONTRAINTE": "FORMAT",
+      "VALEUR": "phone"
+    },
+    {
+      "TABLE_NAME": "CONTRACT",
+      "COLUMN_NAME": "END_DATE",
+      "TYPE_CONTRAINTE": "DATE_RANGE",
+      "VALEUR": "> START_DATE\n"
+    }
+  ],
+  "Regles": [
+    {
+      "REGLE_ID": "R001",
+      "NOM_REGLE": "Contrat_Reference_Non_Nulle",
+      "DESCRIPTION": "La référence du contrat ne doit pas être nulle",
+      "EXPRESSION_SQL": "SELECT * FROM CONTRACT WHERE REFERENCE IS NULL"
+    },
+    {
+      "REGLE_ID": "R002",
+      "NOM_REGLE": "Client_Prenom_Non_Nul",
+      "DESCRIPTION": "Le prénom du client ne doit pas être nul",
+      "EXPRESSION_SQL": "SELECT * FROM CUSTOMER WHERE FIRST_NAME IS NULL"
+    },
+    {
+      "REGLE_ID": "R003",
+      "NOM_REGLE": "Client_Email_Valide",
+      "DESCRIPTION": "L'email du client doit être valide",
+      "EXPRESSION_SQL": "SELECT * FROM CUSTOMER WHERE EMAIL NOT LIKE '%@%.%'"
+    },
+    {
+      "REGLE_ID": "R004",
+      "NOM_REGLE": "Plaque_Immatriculation_Non_Nulle",
+      "DESCRIPTION": "La plaque d'immatriculation ne doit pas être nulle",
+      "EXPRESSION_SQL": "SELECT * FROM FLEETVEHICLE WHERE LICENSE_PLATE IS NULL"
+    },
+    {
+      "REGLE_ID": "R005",
+      "NOM_REGLE": "Montant_Contrat_Positif",
+      "DESCRIPTION": "Le montant du contrat doit être positif",
+      "EXPRESSION_SQL": "SELECT * FROM CONTRACT WHERE AMOUNT < 0"
+    },
+    {
+      "REGLE_ID": "R006",
+      "NOM_REGLE": "Date_Fin_Apres_Debut",
+      "DESCRIPTION": "La date de fin doit être après la date de début",
+      "EXPRESSION_SQL": "SELECT * FROM CONTRACT WHERE END_DATE < START_DATE"
+    },
+    {
+      "REGLE_ID": "R007",
+      "NOM_REGLE": "VIN_Unique",
+      "DESCRIPTION": "Le VIN doit être unique",
+      "EXPRESSION_SQL": "SELECT VIN, COUNT(*) FROM FLEETVEHICLE GROUP BY VIN HAVING COUNT(*) > 1"
+    },
+    {
+      "REGLE_ID": "R008",
+      "NOM_REGLE": "Client_Nom_Complet_Non_Nul",
+      "DESCRIPTION": "Le nom complet du client ne doit pas être nul",
+      "EXPRESSION_SQL": "SELECT * FROM CUSTOMER WHERE FIRST_NAME IS NULL OR LAST_NAME IS NULL"
+    }
+  ],
+  "Valeurs_reference": [
+    {
+      "LISTE_NOM": "STATUT_CONTRAT",
+      "CODE_VALEUR": "ACTIF",
+      "LIBELLE_VALEUR": "Contrat actif"
+    },
+    {
+      "LISTE_NOM": "STATUT_CONTRAT",
+      "CODE_VALEUR": "CLOTURE",
+      "LIBELLE_VALEUR": "Contrat clôturé"
+    },
+    {
+      "LISTE_NOM": "STATUT_CONTRAT",
+      "CODE_VALEUR": "RESILIE",
+      "LIBELLE_VALEUR": "Contrat résilié"
+    },
+    {
+      "LISTE_NOM": "TYPE_VEHICULE",
+      "CODE_VALEUR": "BERLINE",
+      "LIBELLE_VALEUR": "Voiture berline"
+    },
+    {
+      "LISTE_NOM": "TYPE_VEHICULE",
+      "CODE_VALEUR": "SUV",
+      "LIBELLE_VALEUR": "Véhicule SUV"
+    },
+    {
+      "LISTE_NOM": "TYPE_VEHICULE",
+      "CODE_VALEUR": "CITADINE",
+      "LIBELLE_VALEUR": "Voiture citadine"
+    },
+    {
+      "LISTE_NOM": "STATUT_CLIENT",
+      "CODE_VALEUR": "ACTIF",
+      "LIBELLE_VALEUR": "Client actif"
+    },
+    {
+      "LISTE_NOM": "STATUT_CLIENT",
+      "CODE_VALEUR": "INACTIF",
+      "LIBELLE_VALEUR": "Client inactif"
+    }
+  ],
+  "Ponderation_Score": [
+    {
+      "DIMENSION": "COMPLETUDE",
+      "POIDS": 20
+    },
+    {
+      "DIMENSION": "VALIDITE",
+      "POIDS": 20
+    },
+    {
+      "DIMENSION": "COHERENCE",
+      "POIDS": 20
+    },
+    {
+      "DIMENSION": "UNICITE",
+      "POIDS": 20
+    },
+    {
+      "DIMENSION": "INTEGRITE_REFERENTIELLE",
+      "POIDS": 20
+    }
+  ],
+  "Mappings_XGBoost_Features": [
+    {
+      "Feature": "amount",
+      "Table_MILES": "CREDITSCORE",
+      "Colonne_MILES": "REQUESTEDAMOUNT",
+      "Type": "NUMBER",
+      "Cle_jointure": "CUSTOMER_ID",
+      "Justification": "Montant demande au moment de la decision credit (Credit Score.LoanAmount). Meme table que credit_score."
+    },
+    {
+      "Feature": "amount_autorise",
+      "Table_MILES": "CREDITSCORE",
+      "Colonne_MILES": "AUTHORIZEDAMOUNT",
+      "Type": "NUMBER",
+      "Cle_jointure": "CUSTOMER_ID",
+      "Justification": "Montant reellement autorise. Ecart REQUESTEDAMOUNT - AUTHORIZEDAMOUNT = signal d'anomalie fort."
+    },
+    {
+      "Feature": "duration",
+      "Table_MILES": "LEASESERVICE",
+      "Colonne_MILES": "DURATION",
+      "Type": "NUMBER",
+      "Cle_jointure": "LEASESERVICE_ID",
+      "Justification": "Duree du contrat de leasing (unite via DURATIONUNIT_ENUMID)."
+    },
+    {
+      "Feature": "interest_rate",
+      "Table_MILES": "LEASESERVICE",
+      "Colonne_MILES": "INTERESTRATE",
+      "Type": "NUMBER",
+      "Cle_jointure": "LEASESERVICE_ID",
+      "Justification": "Taux d'interet applique. Variante possible: BASEINTERESTRATE."
+    },
+    {
+      "Feature": "anciennete_client",
+      "Table_MILES": "BUSINESSPARTNER",
+      "Colonne_MILES": "ESTABLISHMENTDATE (derive)",
+      "Type": "DATE->calcul",
+      "Cle_jointure": "BUSINESSPARTNER_ID",
+      "Justification": "Remplace 'age'. Disponible pour particuliers ET entreprises (contrairement a PERSON.BIRTHDATE, absent en B2B)."
+    },
+    {
+      "Feature": "credit_score",
+      "Table_MILES": "CREDITSCORE",
+      "Colonne_MILES": "NUMERICSCORE",
+      "Type": "NUMBER",
+      "Cle_jointure": "CUSTOMER_ID",
+      "Justification": "Score de credit numerique le plus recent par client (ROW_NUMBER sur REQUESTDATE)."
+    },
+    {
+      "Feature": "risk_percentage",
+      "Table_MILES": "CREDITSCORE",
+      "Colonne_MILES": "RISKPERCENTAGE",
+      "Type": "NUMBER",
+      "Cle_jointure": "CUSTOMER_ID",
+      "Justification": "Deja disponible dans le meme join que credit_score et amount : feature bonus a cout nul."
+    },
+    {
+      "Feature": "anciennete_contrat",
+      "Table_MILES": "CONTRACT",
+      "Colonne_MILES": "STARTDATE (derive)",
+      "Type": "DATE->calcul",
+      "Cle_jointure": "CONTRACT_ID",
+      "Justification": "Champ obligatoire -> 0% de valeurs manquantes. Souvent plus discriminant que l'age du client."
+    },
+    {
+      "Feature": "is_anomaly",
+      "Table_MILES": "(dérivé des règles)",
+      "Colonne_MILES": "(N/A)",
+      "Type": "TARGET (0/1)",
+      "Cle_jointure": "-",
+      "Justification": " Label cible pour le modèle XGBoost. Dérivé des contrôles fonctionnels (functional_controls_2.xlsx) et des règles métier R001–R008."
+    }
+  ],
+  "Changelog_Mapping": [
+    {
+      "Feature": "amount",
+      "Version_1_initiale": "LEASESERVICE.INVESTMENT",
+      "Version_2_corrigee": "CREDITSCORE.REQUESTEDAMOUNT",
+      "Raison_du_changement": "KG: Credit Score.LoanAmount alimente depuis l'objet Credit Score, pas LEASESERVICE. Un join en moins."
+    },
+    {
+      "Feature": "amount_autorise",
+      "Version_1_initiale": "(absent)",
+      "Version_2_corrigee": "CREDITSCORE.AUTHORIZEDAMOUNT",
+      "Raison_du_changement": "Feature ajoutee : ecart demande/autorise = signal anomalie."
+    },
+    {
+      "Feature": "age",
+      "Version_1_initiale": "PERSON.BIRTHDATE",
+      "Version_2_corrigee": "BUSINESSPARTNER.ESTABLISHMENTDATE (-> anciennete_client)",
+      "Raison_du_changement": "PERSON absent pour clients B2B (majorite du portefeuille en leasing flotte) -> feature trop creuse."
+    },
+    {
+      "Feature": "risk_percentage",
+      "Version_1_initiale": "(absent)",
+      "Version_2_corrigee": "CREDITSCORE.RISKPERCENTAGE",
+      "Raison_du_changement": "Feature ajoutee : deja dans le join credit_score, cout nul."
+    },
+    {
+      "Feature": "anciennete_contrat",
+      "Version_1_initiale": "(absent)",
+      "Version_2_corrigee": "CONTRACT.STARTDATE (derive)",
+      "Raison_du_changement": "Feature ajoutee : champ obligatoire, 0% de valeurs manquantes."
+    },
+    {
+      "Feature": "R007 (SQL)",
+      "Version_1_initiale": "COUNT() sans colonne",
+      "Version_2_corrigee": "COUNT(*)",
+      "Raison_du_changement": "Correction syntaxe SQL : Oracle/PostgreSQL ne supporte pas COUNT() sans colonne."
+    },
+    {
+      "Feature": "Toutes les tables",
+      "Version_1_initiale": "Préfixes ST_ (ST_CREDITSCORE, ST_LEASESERVICE, ST_BUSINESSPARTNER, ST_CONTRACT)",
+      "Version_2_corrigee": "Sans préfixe (CREDITSCORE, LEASESERVICE, BUSINESSPARTNER, CONTRACT)",
+      "Raison_du_changement": "Vérification dictionnaire MILES : les préfixes ST_ n'existent pas dans le dictionnaire source. Tables réelles sans préfixe."
+    }
+  ]
+}
